@@ -4,7 +4,7 @@
 *, body, html {
 	padding: 0; 
 	margin: 0;  
-	box-sizing: border-box; 
+	box-sizing: border-box;  
 font-family: 'Play', sans-serif;
 }
 li { 
@@ -67,7 +67,7 @@ nav.mobile-active ul li {
 	width: 100%;
 }
 .contacts { 
-	max-width: 430px; 
+	max-width: 431px; 
 	font-weight: 700;
 	color: #da8d44;`
 } 
