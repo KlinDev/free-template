@@ -31,16 +31,24 @@ a.nav-menu__item, .dropmenu li, .contacts__form-wrap, .content, .tabs a, .tabs-i
 .dropmenu li, .news__category-tab, .tabs, .tabs li  { 
 	position: relative; 
 }
+
+/*header*/
 header {  
 	position: fixed; 
 	flex-wrap: wrap;
 	width: 100%;
 	background: #ffad5f;  
-	justify-content: space-evenly;
+	justify-content: space-around;
 	font-size: 25px;  
 	color: #000;   
 	top: 0;
 	z-index: 130;  
+}
+header nav {
+	display: flex;
+	max-height: 0;
+	overflow: hidden;
+	transition: .4s ease;
 }
 
 a.nav-menu__item { 
@@ -253,6 +261,8 @@ ul.dropmenu.open:before {
   width: 600%;
   left: 300px;
 }
+
+/*content part*/
 .content {   
 	font-size: 20px; 
 	text-align: center;
@@ -1005,6 +1015,7 @@ button.cart__form-btn:hover{
 	}
 	header {
 		font-size: 20px; 
+		padding: 5px 0;
 	}
 	.following {
 		flex-direction: column;
@@ -1031,29 +1042,64 @@ button.cart__form-btn:hover{
 		top: 0; 
 		left: 0;
 		box-shadow: none; 
+		width: 40px;	
+	}
+	.dropmenu.open .burger-btn span {
+			width: 20px;
 	}
 	.news {
 		margin-top: 0;
 	} 
+
 	.header-mobile-btn {  
 		display: flex; 
 		padding: 5px 0; 
 		align-items: center;
-		color: #fff;
+		background: url('../img/arrw-white.svg') no-repeat center;
 		order: 1;
+		 width: 40px;
+    height: 40px;
+    background-size: 80%;
 	} 
+
+	header.mobile nav {
+    display: flex;
+}
+header.mobile nav ul li ul {
+    display: none;
+}
+header.mobile nav ul.nav-menu {
+   flex-wrap: wrap;
+}
+header.mobile nav ul.nav-menu li {
+    width: 100%;
+}
+header.header.mobile .header-mobile-btn {
+    transform: rotate(180deg);
+}
+header.header.mobile nav {
+    max-height: 260px;
+    background: #da8d44;
+}
+
+	.dropmenu.open .burger-btn span:nth-child(1), .dropmenu.open .burger-btn span:nth-child(3) {
+		margin: 0; 
+		position: absolute;
+		}
+		.dropmenu.open .burger-btn span:nth-child(1) { 
+				transform: rotate(-45deg);
+				top: 20px;	
+		}
+		.dropmenu.open .burger-btn span:nth-child(3) { 
+				transform: rotate(45deg);
+				top: 32px;	
+		}
 	.open-cart {
 		order: 2;
 	}
-	.burger-btn {
-		background-color: none;  
-		width: 65px;
-		height: 55px;
-		right: -60px; 
-	} 
-	.dropmenu.open .burger-btn span:nth-child(1) {
-		margin-top: 20px; 
-		}/* hide menu items */ 
+	
+		
+			/* hide menu items */ 
 		header .logo, header button.search-btn, header .contacts {
 			display: none; 
 		}  

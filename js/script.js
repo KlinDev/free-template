@@ -292,8 +292,19 @@ const cartWrapper = document.querySelector('.cart__wrapper'),
 							cartEmpty.style.display = "block"; 
 							cart.style.height = ''; 
 							cardPriceTotal.textContent = '0'; 
-						} 	
+						} 	 
 					}
+					// open/close mobile nav menu
+					const mobileMenuOpenBtn = document.querySelector('.header-mobile-btn'),
+								header = document.querySelector('.header')
+								mobileMenuList = document.querySelector('.header nav');
+				mobileMenuOpenBtn.addEventListener('click', () => {
+					header.classList.toggle('mobile');
+					// if !(header.contains.classList('mobile') {
+					// 		mobileMenuOpenBtn.
+					// })
+
+			})
 
 $(window).on("scroll", function() {
 	var a = $(this).scrollTop();
@@ -306,5 +317,8 @@ $(window).on("scroll", function() {
 });
 
 
-$(".phone").mask("+7 (999) 999-99-99");
-	}); 		
+
+
+	$(".phone").mask("+7 (999) 999-99-99");
+
+}); 		
