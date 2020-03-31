@@ -46,7 +46,6 @@ header {
 }
 header nav {
 	display: flex;
-	max-height: 0;
 	overflow: hidden;
 	transition: .4s ease;
 }
@@ -1061,6 +1060,9 @@ button.cart__form-btn:hover{
     height: 40px;
     background-size: 80%;
 	} 
+	header nav {
+		max-height: 0;
+	}
 
 	header.mobile nav {
     display: flex;
